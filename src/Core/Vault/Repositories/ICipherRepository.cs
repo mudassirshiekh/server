@@ -38,6 +38,7 @@ public interface ICipherRepository : IRepository<Cipher, Guid>
     Task<DateTime> RestoreAsync(IEnumerable<Guid> ids, Guid userId);
     Task<DateTime> RestoreByIdsOrganizationIdAsync(IEnumerable<Guid> ids, Guid organizationId);
     Task DeleteDeletedAsync(DateTime deletedDateBefore);
+    Task<IEnumerable<OrganizationCipherPermission>> GetCipherPermissionsForOrganizationAsync(Guid organizationId);
 
     /// <summary>
     /// Updates encrypted data for ciphers during a key rotation
