@@ -1,12 +1,10 @@
-﻿using Bit.Api.Models.Request;
-using Bit.Api.Models.Response;
-using Bit.Core.Exceptions;
-using Bit.Core.Repositories;
+﻿using Bit.Core.Exceptions;
+using Bit.Core.Platform;
 using Bit.Core.Utilities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Bit.Api.Controllers;
+namespace Bit.Api.Platform;
 
 [Route("installations")]
 [SelfHosted(NotSelfHostedOnly = true)]

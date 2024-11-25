@@ -1,10 +1,15 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Bit.Core.Entities;
 using Bit.Core.Utilities;
 
 #nullable enable
 
-namespace Bit.Core.Entities;
+namespace Bit.Core.Platform;
 
+/// <summary>
+/// The base entity for the SQL table `dbo.Installation`. Used to store
+/// information pertinent to self hosted Bitwarden installations.
+/// </summary>
 public class Installation : ITableObject<Guid>
 {
     public Guid Id { get; set; }

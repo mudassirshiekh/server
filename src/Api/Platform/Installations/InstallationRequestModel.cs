@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Bit.Core.Entities;
+using Bit.Core.Platform;
 using Bit.Core.Utilities;
 
-namespace Bit.Api.Models.Request;
+namespace Bit.Api.Platform;
 
 public class InstallationRequestModel
 {

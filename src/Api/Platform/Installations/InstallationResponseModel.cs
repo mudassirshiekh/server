@@ -1,7 +1,7 @@
-﻿using Bit.Core.Entities;
-using Bit.Core.Models.Api;
+﻿using Bit.Core.Models.Api;
+using Bit.Core.Platform;
 
-namespace Bit.Api.Models.Response;
+namespace Bit.Api.Platform;
 
 public class InstallationResponseModel : ResponseModel
 {

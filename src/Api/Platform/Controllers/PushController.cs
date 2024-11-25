@@ -7,8 +7,12 @@ using Bit.Core.Utilities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Bit.Api.Controllers;
+namespace Bit.Api.Platform;
 
+/// <summary>
+/// Routes for push relay: functionality that facilitates communication
+/// between self hosted organizations and Bitwarden cloud.
+/// </summary>
 [Route("push")]
 [Authorize("Push")]
 [SelfHosted(NotSelfHostedOnly = true)]
