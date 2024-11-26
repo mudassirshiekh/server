@@ -13,20 +13,23 @@ public class UpdateInstallationCommand : IUpdateInstallationCommand
 {
     private readonly IGetInstallationQuery _getInstallationQuery;
     private readonly IInstallationRepository _installationRepository;
+    private readonly TimeProvider _timeProvider;
 
     public UpdateInstallationCommand(
         IGetInstallationQuery getInstallationQuery,
-        IInstallationRepository installationRepository
+        IInstallationRepository installationRepository,
+        TimeProvider timeProvider
     )
     {
         _getInstallationQuery = getInstallationQuery;
         _installationRepository = installationRepository;
+        _timeProvider = timeProvider;
     }
 
     public async Task UpdateLastActivityDateAsync(Guid installationId)
     {
         var installation = await _getInstallationQuery.GetByIdAsync(installationId);
-        /*TODO: Update `LastActivityDate`*/
+        installation.LastActivityDate = _timeProvider.GetUtcNow().UtcDateTime;
         await _installationRepository.UpsertAsync(installation);
     }
 }

@@ -7,7 +7,7 @@
 /// <remarks>
 /// This interface is implemented by `GetInstallationQuery`
 /// </remarks>
-/// <seealso cref="Bit.Core.Platform.Installations.Queries.GetInstallationQuery"/>
+/// <seealso cref="GetInstallationQuery"/>
 public interface IGetInstallationQuery
 {
     /// <summary>

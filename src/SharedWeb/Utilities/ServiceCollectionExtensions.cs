@@ -28,6 +28,7 @@ using Bit.Core.Identity;
 using Bit.Core.IdentityServer;
 using Bit.Core.NotificationHub;
 using Bit.Core.OrganizationFeatures;
+using Bit.Core.Platform;
 using Bit.Core.Repositories;
 using Bit.Core.Resources;
 using Bit.Core.SecretsManager.Repositories;
@@ -120,6 +121,7 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IOrganizationDomainService, OrganizationDomainService>();
         services.AddVaultServices();
         services.AddReportingServices();
+        services.AddPlatformServices();
     }
 
     public static void AddTokenizers(this IServiceCollection services)
